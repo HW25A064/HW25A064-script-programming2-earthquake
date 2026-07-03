@@ -1,0 +1,17 @@
+{
+  "status": "success",
+  "verified_at_jst": "2026-07-03T13:17:54+09:00",
+  "event_count": 12,
+  "files": {
+    "earthquakes.json": 5109,
+    "earthquakes.csv": 2219,
+    "index.html": 9854
+  },
+  "checks": [
+    "required files exist",
+    "JSON structure and student id",
+    "CSV/JSON row count consistency",
+    "HTML title and embedded data",
+    "magnitude values are valid"
+  ]
+}

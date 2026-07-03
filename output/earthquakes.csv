@@ -1,0 +1,13 @@
+﻿event_id,time_utc,time_jst,magnitude,place,latitude,longitude,depth_km,tsunami,detail_url
+sample01,2026-06-30T23:00:00+00:00,2026-07-01T08:00:00+09:00,4.8,"78 km E of Hachinohe, Japan",40.5,142.3,42.0,False,https://earthquake.usgs.gov/earthquakes/eventpage/sample01
+sample02,2026-06-30T11:00:00+00:00,2026-06-30T20:00:00+09:00,3.4,"35 km SSE of Kushiro, Japan",42.7,144.5,58.0,False,https://earthquake.usgs.gov/earthquakes/eventpage/sample02
+sample03,2026-06-29T23:00:00+00:00,2026-06-30T08:00:00+09:00,5.4,"Izu Islands, Japan region",31.8,140.2,24.0,True,https://earthquake.usgs.gov/earthquakes/eventpage/sample03
+sample04,2026-06-29T02:00:00+00:00,2026-06-29T11:00:00+09:00,2.9,"18 km W of Wakayama, Japan",34.2,134.9,11.0,False,https://earthquake.usgs.gov/earthquakes/eventpage/sample04
+sample05,2026-06-28T10:00:00+00:00,2026-06-28T19:00:00+09:00,4.1,"52 km ESE of Sendai, Japan",38.0,141.5,47.0,False,https://earthquake.usgs.gov/earthquakes/eventpage/sample05
+sample06,2026-06-27T11:00:00+00:00,2026-06-27T20:00:00+09:00,3.0,"Northern Nagano Prefecture, Japan",36.8,138.1,9.0,False,https://earthquake.usgs.gov/earthquakes/eventpage/sample06
+sample07,2026-06-26T14:00:00+00:00,2026-06-26T23:00:00+09:00,4.6,"Ryukyu Islands, Japan",27.4,128.9,63.0,False,https://earthquake.usgs.gov/earthquakes/eventpage/sample07
+sample08,2026-06-25T18:00:00+00:00,2026-06-26T03:00:00+09:00,3.7,"42 km SE of Kagoshima, Japan",31.3,130.8,15.0,False,https://earthquake.usgs.gov/earthquakes/eventpage/sample08
+sample09,2026-06-24T21:00:00+00:00,2026-06-25T06:00:00+09:00,5.1,"Off the east coast of Honshu, Japan",37.1,143.2,36.0,False,https://earthquake.usgs.gov/earthquakes/eventpage/sample09
+sample10,2026-06-24T01:00:00+00:00,2026-06-24T10:00:00+09:00,2.7,"12 km N of Kobe, Japan",34.8,135.2,8.0,False,https://earthquake.usgs.gov/earthquakes/eventpage/sample10
+sample11,2026-06-23T04:00:00+00:00,2026-06-23T13:00:00+09:00,3.8,"Near the west coast of Honshu, Japan",36.2,136.4,18.0,False,https://earthquake.usgs.gov/earthquakes/eventpage/sample11
+sample12,2026-06-22T06:00:00+00:00,2026-06-22T15:00:00+09:00,4.3,"Hokkaido, Japan region",43.5,143.7,72.0,False,https://earthquake.usgs.gov/earthquakes/eventpage/sample12

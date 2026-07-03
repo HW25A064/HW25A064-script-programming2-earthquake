@@ -1,0 +1,15 @@
+[ ] 本人のGitHubリポジトリを使用した
+[ ] README変更のpushでJenkinsが自動起動した
+[ ] ngrokで POST /github-webhook/ 200 OK を確認した
+[ ] Python単体テストが全件成功した
+[ ] earthquakes.json が出力された
+[ ] earthquakes.csv が出力された
+[ ] index.html が出力された
+[ ] build_summary.json が出力された
+[ ] Jenkinsの最終結果が Finished: SUCCESS である
+[ ] 動画にGitHub・ngrok・Jenkinsの3アプリ連携が映っている
+[ ] 動画に秘密情報が映っていない
+[ ] Jenkinsログは動画と同じ成功ビルドである
+[ ] レポートPDFが開ける
+[ ] 最終ZIPを別フォルダへ展開して内容を確認した
+[ ] トークン、パスワード、Webhook URLがZIPに含まれていない

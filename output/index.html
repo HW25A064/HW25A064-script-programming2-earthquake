@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Japan Earthquake Monitor - HW25A064</title>
+<style>
+:root { color-scheme: light; --ink:#17212b; --muted:#657383; --line:#d8dee6; --paper:#f5f7fa; --accent:#b64232; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans JP",sans-serif; color:var(--ink); background:var(--paper); }
+header { background:white; border-bottom:1px solid var(--line); padding:24px clamp(20px,5vw,72px); }
+header h1 { margin:0 0 6px; font-size:clamp(24px,4vw,38px); }
+header p { margin:0; color:var(--muted); }
+main { width:min(1120px,92vw); margin:28px auto 60px; }
+.cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:12px; }
+.card { background:white; border:1px solid var(--line); border-radius:10px; padding:18px; }
+.card strong { display:block; font-size:28px; margin-top:6px; }
+.panel { margin-top:20px; background:white; border:1px solid var(--line); border-radius:10px; padding:20px; }
+.controls { display:flex; flex-wrap:wrap; gap:12px; align-items:end; }
+label { font-size:13px; color:var(--muted); }
+input, select { display:block; margin-top:5px; padding:8px 10px; border:1px solid #aeb7c2; border-radius:6px; background:white; }
+.chart { display:flex; align-items:end; gap:8px; min-height:170px; padding-top:20px; border-bottom:1px solid var(--line); }
+.bar-wrap { flex:1; min-width:24px; text-align:center; font-size:11px; color:var(--muted); }
+.bar { width:100%; max-width:46px; margin:0 auto 6px; background:var(--accent); border-radius:5px 5px 0 0; min-height:3px; }
+table { width:100%; border-collapse:collapse; margin-top:16px; font-size:14px; }
+th, td { padding:10px 8px; border-bottom:1px solid var(--line); text-align:left; vertical-align:top; }
+th { color:#43505e; background:#fafbfc; position:sticky; top:0; }
+.mag { font-weight:700; }
+.mag-high { color:#a22f24; }
+.small { color:var(--muted); font-size:12px; }
+.table-wrap { overflow:auto; max-height:580px; }
+footer { text-align:center; color:var(--muted); padding:24px; }
+@media (max-width:680px) { th:nth-child(5),td:nth-child(5),th:nth-child(6),td:nth-child(6){display:none;} }
+</style>
+</head>
+<body>
+<header>
+  <h1>Japan Earthquake Monitor</h1>
+  <p>日本周辺の地震情報を取得し、Jenkinsで自動生成したダッシュボード / HW25A064 實光駿斗</p>
+</header>
+<main>
+  <section class="cards" id="summary"></section>
+  <section class="panel">
+    <h2>日別件数</h2>
+    <div id="chart" class="chart" aria-label="日別地震件数の棒グラフ"></div>
+  </section>
+  <section class="panel">
+    <div class="controls">
+      <label>地名検索<input id="search" type="search" placeholder="例: Honshu"></label>
+      <label>最低マグニチュード<select id="minMag"><option value="0">すべて</option><option value="3">3.0以上</option><option value="4">4.0以上</option><option value="5">5.0以上</option></select></label>
+      <span class="small" id="resultCount"></span>
+    </div>
+    <div class="table-wrap"><table>
+      <thead><tr><th>発生時刻(JST)</th><th>規模</th><th>場所</th><th>深さ</th><th>緯度</th><th>経度</th></tr></thead>
+      <tbody id="rows"></tbody>
+    </table></div>
+  </section>
+  <section class="panel small" id="meta"></section>
+</main>
+<footer>Generated automatically by Python, JavaScript and Jenkins.</footer>
+<script id="earthquake-data" type="application/json">{"student":{"id":"HW25A064","name":"實光駿斗"},"project":"Japan Earthquake Monitor","generated_at_jst":"2026-07-03T13:17:50+09:00","source":"offline fixture: sample_usgs_japan.json","query":{"days":7,"minimum_magnitude":2.5},"summary":{"count":12,"max_magnitude":5.4,"average_magnitude":3.98,"average_depth_km":33.6,"magnitude_5_or_more":2,"tsunami_events":1},"events":[{"event_id":"sample01","time_utc":"2026-06-30T23:00:00+00:00","time_jst":"2026-07-01T08:00:00+09:00","magnitude":4.8,"place":"78 km E of Hachinohe, Japan","latitude":40.5,"longitude":142.3,"depth_km":42,"tsunami":false,"detail_url":"https://earthquake.usgs.gov/earthquakes/eventpage/sample01"},{"event_id":"sample02","time_utc":"2026-06-30T11:00:00+00:00","time_jst":"2026-06-30T20:00:00+09:00","magnitude":3.4,"place":"35 km SSE of Kushiro, Japan","latitude":42.7,"longitude":144.5,"depth_km":58,"tsunami":false,"detail_url":"https://earthquake.usgs.gov/earthquakes/eventpage/sample02"},{"event_id":"sample03","time_utc":"2026-06-29T23:00:00+00:00","time_jst":"2026-06-30T08:00:00+09:00","magnitude":5.4,"place":"Izu Islands, Japan region","latitude":31.8,"longitude":140.2,"depth_km":24,"tsunami":true,"detail_url":"https://earthquake.usgs.gov/earthquakes/eventpage/sample03"},{"event_id":"sample04","time_utc":"2026-06-29T02:00:00+00:00","time_jst":"2026-06-29T11:00:00+09:00","magnitude":2.9,"place":"18 km W of Wakayama, Japan","latitude":34.2,"longitude":134.9,"depth_km":11,"tsunami":false,"detail_url":"https://earthquake.usgs.gov/earthquakes/eventpage/sample04"},{"event_id":"sample05","time_utc":"2026-06-28T10:00:00+00:00","time_jst":"2026-06-28T19:00:00+09:00","magnitude":4.1,"place":"52 km ESE of Sendai, Japan","latitude":38,"longitude":141.5,"depth_km":47,"tsunami":false,"detail_url":"https://earthquake.usgs.gov/earthquakes/eventpage/sample05"},{"event_id":"sample06","time_utc":"2026-06-27T11:00:00+00:00","time_jst":"2026-06-27T20:00:00+09:00","magnitude":3,"place":"Northern Nagano Prefecture, Japan","latitude":36.8,"longitude":138.1,"depth_km":9,"tsunami":false,"detail_url":"https://earthquake.usgs.gov/earthquakes/eventpage/sample06"},{"event_id":"sample07","time_utc":"2026-06-26T14:00:00+00:00","time_jst":"2026-06-26T23:00:00+09:00","magnitude":4.6,"place":"Ryukyu Islands, Japan","latitude":27.4,"longitude":128.9,"depth_km":63,"tsunami":false,"detail_url":"https://earthquake.usgs.gov/earthquakes/eventpage/sample07"},{"event_id":"sample08","time_utc":"2026-06-25T18:00:00+00:00","time_jst":"2026-06-26T03:00:00+09:00","magnitude":3.7,"place":"42 km SE of Kagoshima, Japan","latitude":31.3,"longitude":130.8,"depth_km":15,"tsunami":false,"detail_url":"https://earthquake.usgs.gov/earthquakes/eventpage/sample08"},{"event_id":"sample09","time_utc":"2026-06-24T21:00:00+00:00","time_jst":"2026-06-25T06:00:00+09:00","magnitude":5.1,"place":"Off the east coast of Honshu, Japan","latitude":37.1,"longitude":143.2,"depth_km":36,"tsunami":false,"detail_url":"https://earthquake.usgs.gov/earthquakes/eventpage/sample09"},{"event_id":"sample10","time_utc":"2026-06-24T01:00:00+00:00","time_jst":"2026-06-24T10:00:00+09:00","magnitude":2.7,"place":"12 km N of Kobe, Japan","latitude":34.8,"longitude":135.2,"depth_km":8,"tsunami":false,"detail_url":"https://earthquake.usgs.gov/earthquakes/eventpage/sample10"},{"event_id":"sample11","time_utc":"2026-06-23T04:00:00+00:00","time_jst":"2026-06-23T13:00:00+09:00","magnitude":3.8,"place":"Near the west coast of Honshu, Japan","latitude":36.2,"longitude":136.4,"depth_km":18,"tsunami":false,"detail_url":"https://earthquake.usgs.gov/earthquakes/eventpage/sample11"},{"event_id":"sample12","time_utc":"2026-06-22T06:00:00+00:00","time_jst":"2026-06-22T15:00:00+09:00","magnitude":4.3,"place":"Hokkaido, Japan region","latitude":43.5,"longitude":143.7,"depth_km":72,"tsunami":false,"detail_url":"https://earthquake.usgs.gov/earthquakes/eventpage/sample12"}]}</script>
+<script>
+const doc = JSON.parse(document.getElementById('earthquake-data').textContent);
+const summaryItems = [
+  ['取得件数', doc.summary.count + '件'],
+  ['最大M', doc.summary.max_magnitude.toFixed(1)],
+  ['平均M', doc.summary.average_magnitude.toFixed(2)],
+  ['平均深さ', doc.summary.average_depth_km.toFixed(1) + 'km'],
+  ['M5以上', doc.summary.magnitude_5_or_more + '件']
+];
+document.getElementById('summary').innerHTML = summaryItems.map(([label,value]) => '<article class="card"><span class="small">'+label+'</span><strong>'+value+'</strong></article>').join('');
+
+const daily = new Map();
+for (const item of doc.events) {
+  const day = item.time_jst.slice(5,10);
+  daily.set(day, (daily.get(day) ?? 0) + 1);
+}
+const entries = [...daily.entries()].sort((a,b) => a[0].localeCompare(b[0]));
+const maxCount = Math.max(...entries.map(([,v]) => v), 1);
+document.getElementById('chart').innerHTML = entries.map(([day,count]) => '<div class="bar-wrap"><div class="bar" style="height:'+Math.max(3, count/maxCount*135)+'px" title="'+count+'件"></div><b>'+count+'</b><br>'+day+'</div>').join('');
+
+function renderRows() {
+  const query = document.getElementById('search').value.trim().toLowerCase();
+  const minMag = Number(document.getElementById('minMag').value);
+  const filtered = doc.events.filter(item => item.magnitude >= minMag && item.place.toLowerCase().includes(query));
+  document.getElementById('rows').innerHTML = filtered.map(item => {
+    const magClass = item.magnitude >= 5 ? 'mag mag-high' : 'mag';
+    return '<tr><td>'+item.time_jst.replace('T',' ')+'</td><td class="'+magClass+'">M'+item.magnitude.toFixed(1)+'</td><td>'+
+      (item.detail_url ? '<a href="'+item.detail_url+'" target="_blank" rel="noreferrer">'+item.place+'</a>' : item.place) +
+      '</td><td>'+item.depth_km.toFixed(1)+' km</td><td>'+item.latitude.toFixed(4)+'</td><td>'+item.longitude.toFixed(4)+'</td></tr>';
+  }).join('');
+  document.getElementById('resultCount').textContent = filtered.length + '件を表示';
+}
+document.getElementById('search').addEventListener('input', renderRows);
+document.getElementById('minMag').addEventListener('change', renderRows);
+renderRows();
+document.getElementById('meta').textContent = '生成日時: '+doc.generated_at_jst+' / データソース: '+doc.source+' / 期間: 過去'+doc.query.days+'日 / 最低M: '+doc.query.minimum_magnitude;
+</script>
+</body>
+</html>

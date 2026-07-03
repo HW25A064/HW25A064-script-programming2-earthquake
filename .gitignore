@@ -1,0 +1,11 @@
+.DS_Store
+__pycache__/
+*.pyc
+.idea/
+.vscode/
+.env
+.env.*
+secrets/
+submission/evidence/*.mp4
+submission/evidence/*.txt
+submission/final/

@@ -1,0 +1,18 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {"generated": 1782864000000, "title": "Offline sample around Japan"},
+  "features": [
+    {"type":"Feature","properties":{"mag":4.8,"place":"78 km E of Hachinohe, Japan","time":1782860400000,"url":"https://earthquake.usgs.gov/earthquakes/eventpage/sample01","tsunami":0},"geometry":{"type":"Point","coordinates":[142.3,40.5,42.0]},"id":"sample01"},
+    {"type":"Feature","properties":{"mag":3.4,"place":"35 km SSE of Kushiro, Japan","time":1782817200000,"url":"https://earthquake.usgs.gov/earthquakes/eventpage/sample02","tsunami":0},"geometry":{"type":"Point","coordinates":[144.5,42.7,58.0]},"id":"sample02"},
+    {"type":"Feature","properties":{"mag":5.4,"place":"Izu Islands, Japan region","time":1782774000000,"url":"https://earthquake.usgs.gov/earthquakes/eventpage/sample03","tsunami":1},"geometry":{"type":"Point","coordinates":[140.2,31.8,24.0]},"id":"sample03"},
+    {"type":"Feature","properties":{"mag":2.9,"place":"18 km W of Wakayama, Japan","time":1782698400000,"url":"https://earthquake.usgs.gov/earthquakes/eventpage/sample04","tsunami":0},"geometry":{"type":"Point","coordinates":[134.9,34.2,11.0]},"id":"sample04"},
+    {"type":"Feature","properties":{"mag":4.1,"place":"52 km ESE of Sendai, Japan","time":1782640800000,"url":"https://earthquake.usgs.gov/earthquakes/eventpage/sample05","tsunami":0},"geometry":{"type":"Point","coordinates":[141.5,38.0,47.0]},"id":"sample05"},
+    {"type":"Feature","properties":{"mag":3.0,"place":"Northern Nagano Prefecture, Japan","time":1782558000000,"url":"https://earthquake.usgs.gov/earthquakes/eventpage/sample06","tsunami":0},"geometry":{"type":"Point","coordinates":[138.1,36.8,9.0]},"id":"sample06"},
+    {"type":"Feature","properties":{"mag":4.6,"place":"Ryukyu Islands, Japan","time":1782482400000,"url":"https://earthquake.usgs.gov/earthquakes/eventpage/sample07","tsunami":0},"geometry":{"type":"Point","coordinates":[128.9,27.4,63.0]},"id":"sample07"},
+    {"type":"Feature","properties":{"mag":3.7,"place":"42 km SE of Kagoshima, Japan","time":1782410400000,"url":"https://earthquake.usgs.gov/earthquakes/eventpage/sample08","tsunami":0},"geometry":{"type":"Point","coordinates":[130.8,31.3,15.0]},"id":"sample08"},
+    {"type":"Feature","properties":{"mag":5.1,"place":"Off the east coast of Honshu, Japan","time":1782334800000,"url":"https://earthquake.usgs.gov/earthquakes/eventpage/sample09","tsunami":0},"geometry":{"type":"Point","coordinates":[143.2,37.1,36.0]},"id":"sample09"},
+    {"type":"Feature","properties":{"mag":2.7,"place":"12 km N of Kobe, Japan","time":1782262800000,"url":"https://earthquake.usgs.gov/earthquakes/eventpage/sample10","tsunami":0},"geometry":{"type":"Point","coordinates":[135.2,34.8,8.0]},"id":"sample10"},
+    {"type":"Feature","properties":{"mag":3.8,"place":"Near the west coast of Honshu, Japan","time":1782187200000,"url":"https://earthquake.usgs.gov/earthquakes/eventpage/sample11","tsunami":0},"geometry":{"type":"Point","coordinates":[136.4,36.2,18.0]},"id":"sample11"},
+    {"type":"Feature","properties":{"mag":4.3,"place":"Hokkaido, Japan region","time":1782108000000,"url":"https://earthquake.usgs.gov/earthquakes/eventpage/sample12","tsunami":0},"geometry":{"type":"Point","coordinates":[143.7,43.5,72.0]},"id":"sample12"}
+  ]
+}

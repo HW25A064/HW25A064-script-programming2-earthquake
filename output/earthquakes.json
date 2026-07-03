@@ -1,0 +1,167 @@
+{
+  "student": {
+    "id": "HW25A064",
+    "name": "實光駿斗"
+  },
+  "project": "Japan Earthquake Monitor",
+  "generated_at_jst": "2026-07-03T13:17:50+09:00",
+  "source": "offline fixture: sample_usgs_japan.json",
+  "query": {
+    "days": 7,
+    "minimum_magnitude": 2.5
+  },
+  "summary": {
+    "count": 12,
+    "max_magnitude": 5.4,
+    "average_magnitude": 3.98,
+    "average_depth_km": 33.6,
+    "magnitude_5_or_more": 2,
+    "tsunami_events": 1
+  },
+  "events": [
+    {
+      "event_id": "sample01",
+      "time_utc": "2026-06-30T23:00:00+00:00",
+      "time_jst": "2026-07-01T08:00:00+09:00",
+      "magnitude": 4.8,
+      "place": "78 km E of Hachinohe, Japan",
+      "latitude": 40.5,
+      "longitude": 142.3,
+      "depth_km": 42.0,
+      "tsunami": false,
+      "detail_url": "https://earthquake.usgs.gov/earthquakes/eventpage/sample01"
+    },
+    {
+      "event_id": "sample02",
+      "time_utc": "2026-06-30T11:00:00+00:00",
+      "time_jst": "2026-06-30T20:00:00+09:00",
+      "magnitude": 3.4,
+      "place": "35 km SSE of Kushiro, Japan",
+      "latitude": 42.7,
+      "longitude": 144.5,
+      "depth_km": 58.0,
+      "tsunami": false,
+      "detail_url": "https://earthquake.usgs.gov/earthquakes/eventpage/sample02"
+    },
+    {
+      "event_id": "sample03",
+      "time_utc": "2026-06-29T23:00:00+00:00",
+      "time_jst": "2026-06-30T08:00:00+09:00",
+      "magnitude": 5.4,
+      "place": "Izu Islands, Japan region",
+      "latitude": 31.8,
+      "longitude": 140.2,
+      "depth_km": 24.0,
+      "tsunami": true,
+      "detail_url": "https://earthquake.usgs.gov/earthquakes/eventpage/sample03"
+    },
+    {
+      "event_id": "sample04",
+      "time_utc": "2026-06-29T02:00:00+00:00",
+      "time_jst": "2026-06-29T11:00:00+09:00",
+      "magnitude": 2.9,
+      "place": "18 km W of Wakayama, Japan",
+      "latitude": 34.2,
+      "longitude": 134.9,
+      "depth_km": 11.0,
+      "tsunami": false,
+      "detail_url": "https://earthquake.usgs.gov/earthquakes/eventpage/sample04"
+    },
+    {
+      "event_id": "sample05",
+      "time_utc": "2026-06-28T10:00:00+00:00",
+      "time_jst": "2026-06-28T19:00:00+09:00",
+      "magnitude": 4.1,
+      "place": "52 km ESE of Sendai, Japan",
+      "latitude": 38.0,
+      "longitude": 141.5,
+      "depth_km": 47.0,
+      "tsunami": false,
+      "detail_url": "https://earthquake.usgs.gov/earthquakes/eventpage/sample05"
+    },
+    {
+      "event_id": "sample06",
+      "time_utc": "2026-06-27T11:00:00+00:00",
+      "time_jst": "2026-06-27T20:00:00+09:00",
+      "magnitude": 3.0,
+      "place": "Northern Nagano Prefecture, Japan",
+      "latitude": 36.8,
+      "longitude": 138.1,
+      "depth_km": 9.0,
+      "tsunami": false,
+      "detail_url": "https://earthquake.usgs.gov/earthquakes/eventpage/sample06"
+    },
+    {
+      "event_id": "sample07",
+      "time_utc": "2026-06-26T14:00:00+00:00",
+      "time_jst": "2026-06-26T23:00:00+09:00",
+      "magnitude": 4.6,
+      "place": "Ryukyu Islands, Japan",
+      "latitude": 27.4,
+      "longitude": 128.9,
+      "depth_km": 63.0,
+      "tsunami": false,
+      "detail_url": "https://earthquake.usgs.gov/earthquakes/eventpage/sample07"
+    },
+    {
+      "event_id": "sample08",
+      "time_utc": "2026-06-25T18:00:00+00:00",
+      "time_jst": "2026-06-26T03:00:00+09:00",
+      "magnitude": 3.7,
+      "place": "42 km SE of Kagoshima, Japan",
+      "latitude": 31.3,
+      "longitude": 130.8,
+      "depth_km": 15.0,
+      "tsunami": false,
+      "detail_url": "https://earthquake.usgs.gov/earthquakes/eventpage/sample08"
+    },
+    {
+      "event_id": "sample09",
+      "time_utc": "2026-06-24T21:00:00+00:00",
+      "time_jst": "2026-06-25T06:00:00+09:00",
+      "magnitude": 5.1,
+      "place": "Off the east coast of Honshu, Japan",
+      "latitude": 37.1,
+      "longitude": 143.2,
+      "depth_km": 36.0,
+      "tsunami": false,
+      "detail_url": "https://earthquake.usgs.gov/earthquakes/eventpage/sample09"
+    },
+    {
+      "event_id": "sample10",
+      "time_utc": "2026-06-24T01:00:00+00:00",
+      "time_jst": "2026-06-24T10:00:00+09:00",
+      "magnitude": 2.7,
+      "place": "12 km N of Kobe, Japan",
+      "latitude": 34.8,
+      "longitude": 135.2,
+      "depth_km": 8.0,
+      "tsunami": false,
+      "detail_url": "https://earthquake.usgs.gov/earthquakes/eventpage/sample10"
+    },
+    {
+      "event_id": "sample11",
+      "time_utc": "2026-06-23T04:00:00+00:00",
+      "time_jst": "2026-06-23T13:00:00+09:00",
+      "magnitude": 3.8,
+      "place": "Near the west coast of Honshu, Japan",
+      "latitude": 36.2,
+      "longitude": 136.4,
+      "depth_km": 18.0,
+      "tsunami": false,
+      "detail_url": "https://earthquake.usgs.gov/earthquakes/eventpage/sample11"
+    },
+    {
+      "event_id": "sample12",
+      "time_utc": "2026-06-22T06:00:00+00:00",
+      "time_jst": "2026-06-22T15:00:00+09:00",
+      "magnitude": 4.3,
+      "place": "Hokkaido, Japan region",
+      "latitude": 43.5,
+      "longitude": 143.7,
+      "depth_km": 72.0,
+      "tsunami": false,
+      "detail_url": "https://earthquake.usgs.gov/earthquakes/eventpage/sample12"
+    }
+  ]
+}
